@@ -6,6 +6,10 @@ win= pyglet.window.Window()
 img= pyglet.image.load('assets/hero/sliced/idle-3.png')
 spr = pyglet.sprite.Sprite(img, x = 200, y = 200)
 
+spritesheet= pyglet.image.load('assets/hero/Old hero.png')
+smol_img = pygame.Surface([16, 16])
+smol_img.blit(spritesheet, (0, 0), (16, 0, 16, 16))
+
 # Get the key state handler object
 keys = pyglet.window.key.KeyStateHandler()
 
