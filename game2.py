@@ -8,6 +8,8 @@ hp = 100
 img= pyglet.image.load('assets/hero/sliced/idle-3.png')
 spr = pyglet.sprite.Sprite(img, x = 200, y = 200)
 
+img2 = pyglet.image.load('assets/forest-assets/cave.png')
+
 spritesheet= pyglet.image.load('assets/hero/Old hero.png')
 
 # create some texe
@@ -48,6 +50,7 @@ def on_draw():
     if hp > 0:
         spr.draw()
     text.draw()
+img.blit(x = 100, y = 100)
     
 
 pyglet.clock.schedule(update) 
