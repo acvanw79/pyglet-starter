@@ -3,7 +3,7 @@ win = pyglet.window.Window()
 
 
 img = pyglet.image.load('assets/gfx/Inner.png')
-
+smol_img = img.get_region(x=16, y=16, width=64, height=64)
 
 def update(dt):
     pass
@@ -11,13 +11,12 @@ def update(dt):
 sprites = []
 for i in range(4):
     for j in range(4):
-        sprites.append(pyglet.sprite.Sprite(img, x = i, y = j))
+        sprites.append(pyglet.sprite.Sprite(smol_img, x = i, y = j))
+
 
 
 def on_draw():
-    for i in range(4):
-        sprites[i].draw()
-
+    sprites[i].draw()
 
 
 pyglet.clock.schedule(update) 
